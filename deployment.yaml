@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-app
-  labels:
-    app: hello-app
 spec:
   replicas: 1
   selector:
@@ -15,7 +13,7 @@ spec:
         app: hello-app
     spec:
       containers:
-        - name: hello-app
-          image: REPLACE_WITH_IMAGE
-          ports:
-            - containerPort: 80
+      - name: hello-app
+        image: seu-usuario/hello-app:latest  # Será atualizado pelo CI/CD
+        ports:
+        - containerPort: 8000
