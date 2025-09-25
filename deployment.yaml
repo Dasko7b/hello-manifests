@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: seu-usuario/hello-app:latest  # Será atualizado pelo CI/CD
+        image: d4sko7b/hello-app:latest  # ← Será substituído
         ports:
         - containerPort: 8000
